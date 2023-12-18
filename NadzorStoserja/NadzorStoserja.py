@@ -1,12 +1,21 @@
 
 from tkinter import *
 from time import sleep
-import numpy
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO #izkomenteraj ko laufa na RaspberryPi 
 
 
 root = Tk()
-root.title("Nadzor žage")
+root.title("CNC BackGuage")
+'''
+xpadframe=0
+xpadbutton=10
+xpadnums=15
+xpadsymbols=15
+ypadbutton=10
+
+fenceframe=LabelFrame(root, text= "Fence", padx= xpadframe, pady=20 )
+fenceframe.grid(row=0, column=1, sticky= N, padx= 5, pady=10)
+'''
 
 #pin setup
 DIR = 000 #smer
@@ -31,8 +40,17 @@ steps_mm = 9.0945
 
 #Premikanje mororja
 
-def move_motor():
-    
+ '''  
+fen = Entry(fenceframe, width=10, borderwidth=5)
+fen.grid(row=0, column=0, columnspan=2, padx=0, pady=10)
+fen.insert(0, 0)
+ 
+C_fence_position =Label (fenceframe, text = "Current Position = ", font=("Arial", 12))
+C_fence_position.grid (row=3, column=0)
 
+Current_fence_position = Entry(fenceframe, width=7, borderwidth=2)
+Current_fence_position.grid(row=3, column=1)
+Current_fence_position.insert(0,0)
+'''
  
 root.mainloop()
